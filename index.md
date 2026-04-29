@@ -1,113 +1,67 @@
-import base64
-
-# index.md content (Markdown with embedded CSS link)
-index_md = """---
+---
 layout: default
-title: プライバシーポリシー
+title: プライバシーポリシー / Privacy Policy
 ---
 
 <link rel="stylesheet" href="style.css">
 
-<div class="container">
+<div class="policy-container">
 
 # プライバシーポリシー
 
-このプライバシーポリシーは、[あなたの拡張機能名]（以下「本拡張機能」）の利用におけるユーザー情報の取り扱いについて説明するものです。
+このプライバシーポリシーは、提供するChrome拡張機能（以下「本拡張機能」）におけるユーザー情報の取り扱いについて説明するものです。
 
-最終更新日: 2024年4月29日
+**最終更新日: 2024年5月22日**
 
-## 1. データの収集と利用
-本拡張機能は、ユーザーの個人を特定できる情報（氏名、住所、メールアドレス、電話番号など）を一切収集しません。また、ブラウジング履歴やウェブサイトのコンテンツなどの機密性の高い情報を外部サーバーに送信することもありません。
+---
 
-## 2. データの保存
-本拡張機能の設定や一時的なデータ（もしあれば）は、すべてユーザーのローカルデバイス上のブラウザストレージ（`chrome.storage.local` 等）にのみ保存されます。これらのデータが開発者や第三者に共有されることはありません。
+## 1. データの収集と利用について
+本拡張機能は、ユーザーの個人を特定できる情報（氏名、住所、メールアドレス、電話番号など）を一切収集しません。
 
-## 3. 権限（パーミッション）の使用について
-本拡張機能が要求する権限は、機能を提供するために最低限必要なものに限定されています。
-- **[例: storage]**: ユーザーの設定を保存するために使用します。
-- **[例: activeTab]**: 現在開いているタブに対して機能を提供するために使用します。
-これらの権限を通じて取得されたデータが、外部に漏洩したり収集されたりすることはありません。
+## 2. ローカル環境での動作（Local-First）
+本拡張機能は「Local-First」の設計思想に基づいています。拡張機能が扱うすべてのデータや設定は、ユーザーが使用しているデバイス上のローカルストレージ（`chrome.storage.local` 等）にのみ保存されます。ブラウジング内容や入力データが外部サーバーに送信されたり、クラウド上に保存されたりすることは一切ありません。
 
-## 4. Google User Data Policyへの準拠
-本拡張機能は、Chromeウェブストアの[ユーザーデータに関するポリシー](https://developer.chrome.com/docs/webstore/program-policies/user-data-faq)（Limited Use要件を含む）を遵守しています。
-- ユーザーの利益を第一の目的としてデータを取り扱います。
-- 広告配信、クレジットスコアの算出、またはその他の不適切な目的でユーザーデータを利用することはありません。
+## 3. 解析・計測ツールの不使用（No Analytics）
+本拡張機能では、Google Analytics などのアクセス解析ツール、広告トラッキングツール、およびクラッシュレポート送信ツールを一切使用していません。ユーザーの利用動向を外部から監視・追跡することはありません。
 
-## 5. 第三者への開示
-本拡張機能はデータを収集しないため、第三者にデータを販売または提供することはありません。
+## 4. 使用する権限（パーミッション）について
+本拡張機能が要求する権限は、機能提供に必要最小限なものに限定されています。
+- **[例: storage]**: ユーザー設定をローカルに保存するために使用します。
+- **[例: activeTab]**: 現在開いているページに対して機能を実行するためにのみ使用します。
 
-## 6. ポリシーの変更
-本プライバシーポリシーは、必要に応じて更新されることがあります。重要な変更がある場合は、拡張機能のアップデート情報などを通じてお知らせします。
+## 5. Google ユーザーデータポリシーへの準拠
+本拡張機能は、Chrome ウェブストアの[ユーザーデータに関するポリシー](https://developer.chrome.com/docs/webstore/program-policies/user-data-faq)（Limited Use要件を含む）を遵守しています。
 
-## 7. お問い合わせ
-本ポリシーに関するご質問がある場合は、以下の連絡先までお問い合わせください。
+## 6. お問い合わせ
+本ポリシーに関するご質問は、以下までご連絡ください。
+- **開発者**: [あなたの名前 または 組織名]
+- **メールアドレス**: [あなたの連絡用メールアドレス]
 
-- 開発者: [あなたの名前 または 組織名]
-- メールアドレス: [あなたのメールアドレス]
+---
+
+# Privacy Policy
+
+This Privacy Policy explains how user information is handled in this Chrome Extension.
+
+**Last updated: May 22, 2024**
+
+## 1. Data Collection
+We do NOT collect any personally identifiable information.
+
+## 2. Local-First Design
+This Extension is built with a "Local-First" approach. All data and settings are stored exclusively on your local device. No data is transmitted to or stored on any external servers.
+
+## 3. No Analytics
+We do NOT use any analytics tools (such as Google Analytics), tracking pixels, or error reporting tools. Your usage behavior is never tracked or monitored.
+
+## 4. Permissions
+Permissions requested are limited to the minimum necessary. All data accessed remains on your local machine.
+
+## 5. Compliance
+This Extension complies with the Chrome Web Store User Data Policy.
+
+## 6. Contact
+- **Developer**: [Your Name or Organization]
+- **Email**: [Your Email Address]
 
 </div>
-"""
-
-# style.css content
-style_css = """
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-h1 {
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    font-size: 24pt;
-}
-
-h2 {
-    color: #2c3e50;
-    border-left: 5px solid #0056b3;
-    padding-left: 15px;
-    margin-top: 40px;
-    font-size: 16pt;
-}
-
-p, li {
-    font-size: 11pt;
-    margin-bottom: 15px;
-}
-
-a {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #666;
-}
-"""
-
-with open("index.md", "w", encoding="utf-8") as f:
-    f.write(index_md)
-
-with open("style.css", "w", encoding="utf-8") as f:
-    f.write(style_css)
