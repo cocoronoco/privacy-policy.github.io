@@ -1,84 +1,113 @@
----
+import base64
+
+# index.md content (Markdown with embedded CSS link)
+index_md = """---
+layout: default
 title: プライバシーポリシー
-layout: null
 ---
-<link rel="stylesheet" href="/styles.css">
+
+<link rel="stylesheet" href="style.css">
 
 <div class="container">
 
-# プライバシーポリシー — Multiple searches within a page
+# プライバシーポリシー
 
-<div class="meta">最終更新日: 2026-04-29</div>
+このプライバシーポリシーは、[あなたの拡張機能名]（以下「本拡張機能」）の利用におけるユーザー情報の取り扱いについて説明するものです。
 
-このプライバシーポリシーは、Chrome拡張機能「Multiple searches within a page」（以下「本拡張機能」）が利用者のデータをどのように取り扱うかを説明します。
+最終更新日: 2024年4月29日
 
+## 1. データの収集と利用
+本拡張機能は、ユーザーの個人を特定できる情報（氏名、住所、メールアドレス、電話番号など）を一切収集しません。また、ブラウジング履歴やウェブサイトのコンテンツなどの機密性の高い情報を外部サーバーに送信することもありません。
 
-- 本拡張機能は、個人を特定できる情報（氏名、メールアドレス、端末識別子など）を収集、送信、保存しません。
-- 本拡張機能は利用者のブラウザ内でのみ動作し、ページ内検索はすべてローカルで実行されます。
-- 本拡張機能がデータを収集していると思われる場合は、下記の連絡先までお問い合わせください。
----
-title: プライバシーポリシー
----
+## 2. データの保存
+本拡張機能の設定や一時的なデータ（もしあれば）は、すべてユーザーのローカルデバイス上のブラウザストレージ（`chrome.storage.local` 等）にのみ保存されます。これらのデータが開発者や第三者に共有されることはありません。
 
+## 3. 権限（パーミッション）の使用について
+本拡張機能が要求する権限は、機能を提供するために最低限必要なものに限定されています。
+- **[例: storage]**: ユーザーの設定を保存するために使用します。
+- **[例: activeTab]**: 現在開いているタブに対して機能を提供するために使用します。
+これらの権限を通じて取得されたデータが、外部に漏洩したり収集されたりすることはありません。
 
+## 4. Google User Data Policyへの準拠
+本拡張機能は、Chromeウェブストアの[ユーザーデータに関するポリシー](https://developer.chrome.com/docs/webstore/program-policies/user-data-faq)（Limited Use要件を含む）を遵守しています。
+- ユーザーの利益を第一の目的としてデータを取り扱います。
+- 広告配信、クレジットスコアの算出、またはその他の不適切な目的でユーザーデータを利用することはありません。
 
-# プライバシーポリシー — Multiple searches within a page
+## 5. 第三者への開示
+本拡張機能はデータを収集しないため、第三者にデータを販売または提供することはありません。
 
+## 6. ポリシーの変更
+本プライバシーポリシーは、必要に応じて更新されることがあります。重要な変更がある場合は、拡張機能のアップデート情報などを通じてお知らせします。
 
-<div class="meta">最終更新日: 2026-04-29</div>
+## 7. お問い合わせ
+本ポリシーに関するご質問がある場合は、以下の連絡先までお問い合わせください。
 
-このプライバシーポリシーは、Chrome拡張機能「Multiple searches within a page」（以下「本拡張機能」）が利用者のデータをどのように取り扱うかを説明します。
-
-## 要約
-
-- 本拡張機能は、個人を特定できる情報（氏名、メールアドレス、端末識別子など）を収集、送信、保存しません。
-- 本拡張機能は利用者のブラウザ内でのみ動作し、ページ内検索はすべてローカルで実行されます。
-- 本拡張機能がデータを収集していると思われる場合は、下記の連絡先までお問い合わせください。
-
-## 収集するデータ
-
-- 本拡張機能は個人情報を収集しません。
-- 閲覧履歴、ページ内容、検索語句などを外部サーバーに送信することはありません。
-
-## データの利用方法
-
-- 本拡張機能はデータを収集・送信しないため、個人データの利用は行いません。
-- ページ内検索機能はブラウザ内のDOMを操作してローカルに結果を表示します。
-
-## 第三者への共有
-
-- 本拡張機能はユーザーデータを第三者と共有しません。
-- 分析ツール、広告、クラッシュレポート等の第三者サービスは使用していません。
-- 将来的に第三者サービスを導入する場合は、本ポリシーを更新し利用者に通知します。
-
-## 保存と保持
-
-- 本拡張機能は外部サーバーにユーザーデータを保存しません。
-- ブラウザの拡張機能ストレージに保存するローカル設定は、UIの表示／操作に関する非個人設定のみであり、個人情報は含みません。
-
-## セキュリティ
-
-- 本拡張機能はユーザーの許可範囲でページにアクセスし、DOM上で検索処理を行います。
-- データを外部へ送信しないため、リモートによるデータ流出のリスクは最小限です。
-
-## 子どものプライバシー
-
-- 本拡張機能は13歳未満の子どもを対象としていません。13歳未満の子どもから意図的に個人情報を収集することはありません。
-
-## ポリシーの変更
-
-- 本ポリシーは随時更新されることがあります。上部の「最終更新日」が更新日時を示します。
-
-## 連絡先
-
-本プライバシーポリシーやデータ取り扱いに関するご質問は、以下までご連絡ください。
-
-開発者: [Your name or company]
-
-メール: privacy@example.com
-
----
-
-<footer>© 2026 [Your name or company]</footer>
+- 開発者: [あなたの名前 または 組織名]
+- メールアドレス: [あなたのメールアドレス]
 
 </div>
+"""
+
+# style.css content
+style_css = """
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 24pt;
+}
+
+h2 {
+    color: #2c3e50;
+    border-left: 5px solid #0056b3;
+    padding-left: 15px;
+    margin-top: 40px;
+    font-size: 16pt;
+}
+
+p, li {
+    font-size: 11pt;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}
+"""
+
+with open("index.md", "w", encoding="utf-8") as f:
+    f.write(index_md)
+
+with open("style.css", "w", encoding="utf-8") as f:
+    f.write(style_css)
