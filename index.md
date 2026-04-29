@@ -2,23 +2,28 @@
 title: プライバシーポリシー
 layout: null
 ---
-
-<style>
-:root{--bg:#f7fafc;--card:#ffffff;--text:#1f2937;--muted:#6b7280;--accent:#0b5fff}
-body{font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans JP",sans-serif;background:var(--bg);color:var(--text);margin:0;padding:48px}
-.container{max-width:900px;margin:0 auto;background:var(--card);padding:40px;border-radius:12px;box-shadow:0 6px 24px rgba(15,23,42,0.08)}
-h1{font-size:28px;margin:0 0 8px}
-.meta{color:var(--muted);font-size:14px;margin-bottom:20px}
-h2{font-size:20px;margin-top:28px}
-ul{margin:8px 0 0 20px}
-footer{margin-top:32px;color:var(--muted);font-size:13px}
-a{color:var(--accent)}
-@media (max-width:600px){body{padding:20px}.container{padding:20px}}
-</style>
+<link rel="stylesheet" href="/styles.css">
 
 <div class="container">
 
 # プライバシーポリシー — Multiple searches within a page
+
+<div class="meta">最終更新日: 2026-04-29</div>
+
+このプライバシーポリシーは、Chrome拡張機能「Multiple searches within a page」（以下「本拡張機能」）が利用者のデータをどのように取り扱うかを説明します。
+
+
+- 本拡張機能は、個人を特定できる情報（氏名、メールアドレス、端末識別子など）を収集、送信、保存しません。
+- 本拡張機能は利用者のブラウザ内でのみ動作し、ページ内検索はすべてローカルで実行されます。
+- 本拡張機能がデータを収集していると思われる場合は、下記の連絡先までお問い合わせください。
+---
+title: プライバシーポリシー
+---
+
+
+
+# プライバシーポリシー — Multiple searches within a page
+
 
 <div class="meta">最終更新日: 2026-04-29</div>
 
@@ -73,8 +78,6 @@ a{color:var(--accent)}
 メール: privacy@example.com
 
 ---
-
-<p class="meta">Chrome Web Store 提出メモ: 本ポリシーを公開可能なURL（例: https://example.com/privacy）でホスティングし、Chrome デベロッパーダッシュボードの「Privacy policy URL」にそのURLを設定してください。将来、本拡張機能がデータを収集するようになった場合は、収集するデータ項目、利用目的、第三者への共有先などを明記して本ポリシーを更新してください。</p>
 
 <footer>© 2026 [Your name or company]</footer>
 
