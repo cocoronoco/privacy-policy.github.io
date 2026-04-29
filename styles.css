@@ -7,8 +7,8 @@
     --hr: #edf2f7;
     --shadow: 0 10px 25px rgba(0,0,0,0.05);
     --max-width: 800px;
-    --gap-lg: 2.5rem;
-    --gap-md: 1.5rem;
+    --gap-lg: 1.25rem;
+    --gap-md: 0.75rem;
 }
 
 *{box-sizing:border-box}
@@ -17,7 +17,7 @@ body{
     margin:0;
     padding:0;
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-    line-height:1.75;
+    line-height:1.45;
     color:var(--text);
     background-color:var(--bg);
     -webkit-font-smoothing:antialiased;
@@ -25,25 +25,25 @@ body{
 
 .policy-container{
     max-width:var(--max-width);
-    margin:3.75rem auto;
-    padding:3rem;
+    margin:1.5rem auto;
+    padding:1.5rem;
     background-color:var(--card);
     box-shadow:var(--shadow);
-    border-radius:12px;
+    border-radius:10px;
 }
 
 h1,h2{color:var(--accent)}
 
 h1{
-    font-size:2.2rem;
-    margin-bottom:2.5rem;
+    font-size:1.9rem;
+    margin-bottom:1rem;
     text-align:center;
     border-bottom:2px solid rgba(232,240,254,0.7);
-    padding-bottom:1.25rem;
+    padding-bottom:0.6rem;
 }
 
 h2{
-    font-size:1.25rem;
+    font-size:1.15rem;
     margin:var(--gap-lg) 0 var(--gap-md);
     display:flex;
     align-items:center;
@@ -59,14 +59,15 @@ h2::before{
     border-radius:3px;
 }
 
-p,li{font-size:1.05rem;color:var(--muted);margin-bottom:1.25rem}
 
-hr{border:0;border-top:1px solid var(--hr);margin:3rem 0}
+p,li{font-size:1.03rem;color:var(--muted);margin-bottom:0.6rem}
+
+hr{border:0;border-top:1px solid var(--hr);margin:1.25rem 0}
 
 a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .18s}
 a:hover{border-bottom-color:var(--accent)}
 
 @media (max-width:768px){
-    .policy-container{margin:1.25rem;padding:1.75rem}
-    h1{font-size:1.6rem}
+    .policy-container{margin:0.8rem;padding:1rem}
+    h1{font-size:1.5rem}
 }
