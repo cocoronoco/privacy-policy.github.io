@@ -7,8 +7,8 @@
     --hr: #edf2f7;
     --shadow: 0 10px 25px rgba(0,0,0,0.05);
     --max-width: 800px;
-    --gap-lg: 0.9rem;
-    --gap-md: 0.5rem;
+    --gap-lg: 1.8rem;
+    --gap-md: 0.9rem;
 }
 
 *{box-sizing:border-box}
@@ -58,7 +58,6 @@ h2::before{
     margin-right:0.75rem;
     border-radius:3px;
 }
-
 
 
 p,li{font-size:1.03rem;color:var(--muted);margin-bottom:0.4rem}
